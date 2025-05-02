@@ -147,7 +147,7 @@ def main(args):
     elif args.shift_type == "cross_task":
         check_list = task_list
     
-    data_path = join(args.data_path, args.data_dim, "external", args.shift_type)
+    data_path = join(args.data_path, args.data_dim, "OOD", args.shift_type)
     for task in sorted(os.listdir(data_path)):
         task_path = join(data_path, task)
         for dataset in sorted(os.listdir(task_path)):

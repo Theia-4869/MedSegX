@@ -131,7 +131,7 @@ def main(args):
         drop_last=True,
     )
     
-    val_dataset = GeneralMedSegDB(join(args.data_path, args.data_dim, "internal"), train=False)
+    val_dataset = GeneralMedSegDB(join(args.data_path, args.data_dim, "ID"), train=False)
     logger.info(f"Number of validation samples: {len(val_dataset)}")
     val_dataloader = DataLoader(
         val_dataset,
@@ -336,9 +336,9 @@ def main(args):
     logger.info(f"Best epoch: {best_epoch}, Best DSC: {best_dsc}")
     logger.info(f"Time cost: {total_time_str}")
     
-    # os.system(f"python evaluate_internal.py --method {args.method} --bottleneck_dim {args.bottleneck_dim} --embedding_dim {args.embedding_dim} --resume {join(work_dir, 'model_best.pth')}")
-    # os.system(f"python evaluate_external.py --method {args.method} --bottleneck_dim {args.bottleneck_dim} --embedding_dim {args.embedding_dim} --shift_type distribution_shift --resume {join(work_dir, 'model_best.pth')}")
-    # os.system(f"python evaluate_external.py --method {args.method} --bottleneck_dim {args.bottleneck_dim} --embedding_dim {args.embedding_dim} --shift_type task_shift --resume {join(work_dir, 'model_best.pth')}")
+    # os.system(f"python evaluate_id.py --method {args.method} --bottleneck_dim {args.bottleneck_dim} --embedding_dim {args.embedding_dim} --resume {join(work_dir, 'model_best.pth')}")
+    # os.system(f"python evaluate_ood.py --method {args.method} --bottleneck_dim {args.bottleneck_dim} --embedding_dim {args.embedding_dim} --shift_type distribution_shift --resume {join(work_dir, 'model_best.pth')}")
+    # os.system(f"python evaluate_ood.py --method {args.method} --bottleneck_dim {args.bottleneck_dim} --embedding_dim {args.embedding_dim} --shift_type task_shift --resume {join(work_dir, 'model_best.pth')}")
 
 
 if __name__ == "__main__":

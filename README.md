@@ -12,11 +12,11 @@ python finetune.py
 ```
 
 ## Evaluate
-Internal evaluation:
+ID evaluation:
 ```
-python evaluate_internal.py
+python evaluate_id.py
 ```
-External evaluation:
+OOD evaluation:
 ```
-python evaluate_external.py
+python evaluate_ood.py
 ```
