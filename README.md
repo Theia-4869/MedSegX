@@ -20,3 +20,12 @@ OOD evaluation:
 ```
 python evaluate_ood.py
 ```
+
+## Dataset
+
+MedSegDB was constructed through the preprocessing of publicly available medical image segmentation datasets. 
+
+👉 It is available on [HuggingFace](https://huggingface.co/datasets/medicalai/MedSegDB).
+
+For additional information about the datasets or their licenses, please reach out to the owners.
+
